@@ -174,7 +174,7 @@ public class StripePocActivity extends BasePaymentActivity {
             PaymentIntent.Status status = paymentIntent.getStatus();
             if (status == PaymentIntent.Status.Succeeded) {
                 Log.d("**********"+TAG , "payment completed successfully now parse data from it ");
-                MultiServicePayment.mBuilder.mPaymentActionHandlers.onAction(StripePocActivity.this, StripePocActivity.this, PaymentModuleScreens.StripePocActivity, PaymentModuleActions.StripCardPayment_Success, "this is data obtained after payment success");
+                MultiServicePayment.mBuilder.mPaymentActionHandlers.onAction(StripePocActivity.this, StripePocActivity.this, PaymentModuleScreens.StripePocActivity, PaymentModuleActions.StripCardPayment_Success, "SUCCESS RESPONSE");
 //                // Payment completed successfully
 //                Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //                activity.displayAlert(
@@ -191,6 +191,7 @@ public class StripePocActivity extends BasePaymentActivity {
 //                );
 
                 Log.d("**********"+TAG , "Payment failed due to some reason , that will be find in coming object");
+                MultiServicePayment.mBuilder.mPaymentActionHandlers.onAction(StripePocActivity.this, StripePocActivity.this, PaymentModuleScreens.StripePocActivity, PaymentModuleActions.StripCardPayment_Success, "SUCCESS FAILED");
 
             }
         }
@@ -198,6 +199,7 @@ public class StripePocActivity extends BasePaymentActivity {
         @Override
         public void onError(@NonNull Exception e) {
             PaymentModuleLogs.e("**********"+TAG , "Exception caught "+e.getMessage());
+            MultiServicePayment.mBuilder.mPaymentActionHandlers.onAction(StripePocActivity.this, StripePocActivity.this, PaymentModuleScreens.StripePocActivity, PaymentModuleActions.StripCardPayment_ERROR, "SUCCESS ERROR");
 //            final StripePocActivity activity = activityRef.get();
 //            if (activity == null) {
 //                return;
