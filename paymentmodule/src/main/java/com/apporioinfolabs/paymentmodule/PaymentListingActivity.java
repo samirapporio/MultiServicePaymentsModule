@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class PaymentListingActivity extends BasePaymentActivity  {
+public class PaymentListingActivity extends BasePaymentActivity {
 
     private final static String TAG = "PaymentListingActivity";
 

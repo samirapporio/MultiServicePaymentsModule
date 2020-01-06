@@ -2,6 +2,8 @@ package com.apporioinfolabs.paymentmodule;
 
 import android.app.Application;
 
+import com.apporioinfolabs.paymentmodule.handlers.PaymentActionHandlers;
+import com.apporioinfolabs.paymentmodule.handlers.PaymentScreenLifeCycleHandlers;
 import com.stripe.android.PaymentConfiguration;
 
 public class MultiServicePayment {
@@ -25,7 +27,7 @@ public class MultiServicePayment {
         String mFontpath = "";
         int logo_for_paymen = 0;
 
-        PaymentHandler mPaymentHandler;
+        PaymentActionHandlers mPaymentActionHandlers;
         PaymentScreenLifeCycleHandlers mPaymentScreenLifeCycleHandlers;
 
 
@@ -53,8 +55,8 @@ public class MultiServicePayment {
         }
 
 
-        public Builder setonElementClickHandler(PaymentHandler paymentHandler){
-            mPaymentHandler = paymentHandler;
+        public Builder setonElementClickHandler(PaymentActionHandlers paymentActionHandlers){
+            mPaymentActionHandlers = paymentActionHandlers;
             return this;
         }
 

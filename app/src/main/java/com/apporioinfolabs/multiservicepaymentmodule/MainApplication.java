@@ -13,7 +13,7 @@ public class MainApplication extends Application {
                 .setBaseUrl("Some base url goes here ")
                 .setFontStyle("")
                 .setpaymentLogo(R.drawable.logo_multiservice_payment_circular)
-                .setonElementClickHandler(new MyPaymentHandler())
+                .setonElementClickHandler(new MyPaymentActionHandlers())
                 .setScreenLifeCyclehandler(new MyPaymentLifeCycleHandler())
                 .init();
     }

@@ -68,7 +68,7 @@ public class BasePaymentActivity extends FragmentActivity {
         if(MultiServicePayment.mBuilder.mPaymentScreenLifeCycleHandlers == null){
             PaymentModuleLogs.e(""+getClass().getSimpleName(),"Found No Taxi Screen LifeCycle handler");
         }else{
-            MultiServicePayment.mBuilder.mPaymentScreenLifeCycleHandlers.onScreenLifeCycle(""+getClass().getSimpleName(),""+lifeCycle);
+            MultiServicePayment.mBuilder.mPaymentScreenLifeCycleHandlers.onScreenLifeCycle(this, this, ""+getClass().getSimpleName(),""+lifeCycle);
         }
     }
 

@@ -16,6 +16,8 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
+import com.apporioinfolabs.paymentmodule.utils.PaymentModuleActions;
+import com.apporioinfolabs.paymentmodule.utils.PaymentModuleScreens;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stripe.android.ApiResultCallback;
@@ -152,7 +154,7 @@ public class StripePocActivity extends BasePaymentActivity {
 
     // ...
 
-    private static final class PaymentResultCallback
+    private final class PaymentResultCallback
             implements ApiResultCallback<PaymentIntentResult> {
         @NonNull private final WeakReference<StripePocActivity> activityRef;
 
@@ -172,6 +174,7 @@ public class StripePocActivity extends BasePaymentActivity {
             PaymentIntent.Status status = paymentIntent.getStatus();
             if (status == PaymentIntent.Status.Succeeded) {
                 Log.d("**********"+TAG , "payment completed successfully now parse data from it ");
+                MultiServicePayment.mBuilder.mPaymentActionHandlers.onAction(StripePocActivity.this, StripePocActivity.this, PaymentModuleScreens.StripePocActivity, PaymentModuleActions.StripCardPayment_Success, "this is data obtained after payment success");
 //                // Payment completed successfully
 //                Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //                activity.displayAlert(
