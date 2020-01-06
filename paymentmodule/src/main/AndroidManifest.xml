@@ -4,7 +4,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".PaymentApplication"
         android:usesCleartextTraffic="true">
         <activity android:name=".StripePocActivity"></activity>
         <activity android:name=".PaymentListingActivity" />
