@@ -1,4 +1,4 @@
-package com.apporioinfolabs.paymentmodule.handlers;
+package com.apporioinfolabs.paymentmodule;
 
 public interface PaymentHandler {
 

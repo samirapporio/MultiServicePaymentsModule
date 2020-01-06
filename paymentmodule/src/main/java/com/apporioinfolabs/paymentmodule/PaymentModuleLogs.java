@@ -1,4 +1,4 @@
-package com.apporioinfolabs.paymentmodule.utils;
+package com.apporioinfolabs.paymentmodule;
 
 import android.util.Log;
 

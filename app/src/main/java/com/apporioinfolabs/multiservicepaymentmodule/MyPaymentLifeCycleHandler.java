@@ -2,7 +2,7 @@ package com.apporioinfolabs.multiservicepaymentmodule;
 
 import android.util.Log;
 
-import com.apporioinfolabs.paymentmodule.handlers.PaymentScreenLifeCycleHandlers;
+import com.apporioinfolabs.paymentmodule.PaymentScreenLifeCycleHandlers;
 
 public class MyPaymentLifeCycleHandler implements PaymentScreenLifeCycleHandlers {
 

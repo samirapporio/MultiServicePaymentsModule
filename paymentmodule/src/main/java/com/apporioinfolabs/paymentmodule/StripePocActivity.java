@@ -16,8 +16,6 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
-import com.apporioinfolabs.paymentmodule.models.ModelSecret;
-import com.apporioinfolabs.paymentmodule.utils.PaymentModuleLogs;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.stripe.android.ApiResultCallback;
@@ -32,7 +30,6 @@ import com.stripe.android.view.CardInputWidget;
 import org.json.JSONObject;
 
 import java.lang.ref.WeakReference;
-import java.util.HashMap;
 
 public class StripePocActivity extends BasePaymentActivity {
 

@@ -1,4 +1,4 @@
-package com.apporioinfolabs.paymentmodule.models;
+package com.apporioinfolabs.paymentmodule;
 
 import java.util.List;
 

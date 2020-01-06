@@ -2,8 +2,6 @@ package com.apporioinfolabs.paymentmodule;
 
 import android.app.Application;
 
-import com.apporioinfolabs.paymentmodule.handlers.PaymentHandler;
-import com.apporioinfolabs.paymentmodule.handlers.PaymentScreenLifeCycleHandlers;
 import com.stripe.android.PaymentConfiguration;
 
 public class MultiServicePayment {
